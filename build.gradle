@@ -37,3 +37,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('org.springframework.session:spring-session-jdbc')
 }
+
+tasks.getByName<BootJar>("bootJar") {
+    enabled = true
+    mainClassName = "kr.leocat.test.api.ApiApplication"
+}
