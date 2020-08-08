@@ -18,9 +18,34 @@ cache:
 
 script: "./gradlew clean build"
 
+
+before_deploy:
+  - zip -r boot-project *
+  - mkdir -p deploy
+  - mv boot-project-webservice.zip deploy/boot-project-webservice.zip
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # travis repo setting에 설정된 값
+
+    secret_access_key: $AWS_SECRET_KEY # in travis repo setting
+
+    bucket: boot-project-build
+    region: ap-northeast-2
+    skip_cleanup: true
+
+    acl: private # zip file 접근을 private로,,
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
+    wait-until-deployed: true
+
+
+
 # CI 샐행 완료 시 메일로 알람
 notifications:
   email:
     recipients:
       - anruddms8124@gmail.com
+
+
+
 
