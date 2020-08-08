@@ -20,7 +20,7 @@ script: "./gradlew clean build"
 
 
 before_deploy:
-  - zip -r boot-project *
+  - zip -r boot-project-webservice *
   - mkdir -p deploy
   - mv boot-project-webservice.zip deploy/boot-project-webservice.zip
 
