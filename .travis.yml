@@ -40,7 +40,7 @@ deploy:
 
 
 
-# CI 샐행 완료 시 메일로 알람
+# CI 샐행 완료 시 메일로 알람!
 notifications:
   email:
     recipients:
