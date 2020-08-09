@@ -45,7 +45,7 @@ deploy:
     bucket: boot-project-build
     key: boot-project-webservice.zip #빌드 파일을 압축해서 전달
     bundle_type: zip
-    application: boot-project-webservice
+    application: boot-project
     deployment_group: boot-project-webservice-group
     region: ap-northeast-2
     wait-until-deployed: true
