@@ -16,7 +16,7 @@ cache:
     - '$HOME/.gradle'
 
 
-script: "./gradlew"
+script: "./gradlew clean build"
 
 
 before_deploy:
