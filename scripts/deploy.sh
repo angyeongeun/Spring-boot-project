@@ -32,7 +32,7 @@ echo "> $JAR_NAME 에 실행권한 추가"
 
 chmod +x $JAR_NAME
 
-echo "> $JAR_NAME 실행"
+echo "> $JAR_NAME 실행(위치 잘 맞추기)"
 
 
 nohup java -jar \
