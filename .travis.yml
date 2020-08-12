@@ -41,7 +41,7 @@ deploy:
     skip_cleanup: true
 
     acl: private # zip file 접근을 private로,
-    local_dir: deploy # before_deploy에서 생성한 디렉토리!
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
 
   - provider: codedeploy
