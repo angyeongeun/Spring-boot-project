@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity //테이블과 링크될 클래스임을 나타냄
-public class Posts extends BaseTimeEntity{
+public class Posts {
     @Id //해당 테이블의 PK필드를 나타냄
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK의 생성규칙, GenerationType.IDENTITY옵션을 추가해야만 auto_increment(sequence)가 된다.
     private Long id;
